@@ -12,7 +12,6 @@ import { formatCurrency } from './utils';
 import { unstable_noStore as noStore } from "next/cache";
 
 export async function fetchRevenue() {
-  noStore();
   await new Promise((resolve) => setTimeout(resolve, 3000));
   // Add noStore() here prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
